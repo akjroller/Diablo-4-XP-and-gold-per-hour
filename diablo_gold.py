@@ -10,15 +10,14 @@ sct = mss()
 
 def get_gold_from_screen():
     screenshot = np.array(sct.grab(mon))
-    text = pytesseract.image_to_string(screenshot, config='--psm 11')
-
-   # print(f"OCR output: {text}")  # Debugging print statement
+    grayscale = cv2.cvtColor(screenshot, cv2.COLOR_BGR2GRAY)
+    text = pytesseract.image_to_string(grayscale, config='--psm 11')
 
     gold_amount = 0
     if "Gold" in text:
         try:
             gold_amount = int(re.findall(r'(\d+)\s*Gold', text)[0])
-            print(f"{gold_amount} gold found on screen.")  # Debugging print statement
+            print(f"{gold_amount} gold found on screen.")
         except (IndexError, ValueError):
             print("Could not parse gold amount")
     else:
@@ -27,28 +26,30 @@ def get_gold_from_screen():
     return gold_amount
 
 def main():
-    total_gold = 0
-    minutes = 0
+    gold_list = []
+    weights = []
+    decay_rate = 0.9 
+
     start_time = time.time()
 
     while True:
         gold_current_second = get_gold_from_screen()
-        total_gold += gold_current_second
+        gold_list.append(gold_current_second)
+        weights.append(decay_rate ** len(gold_list))
 
-        if time.time() - start_time >= 60:  # 60 seconds (1 minute) have passed
-            minutes += 1
-            
-            gold_per_minute = total_gold / minutes
-            gold_per_hour = gold_per_minute * 60
-            
+        if time.time() - start_time >= 60:
+            weights = [weight / sum(weights) for weight in weights]
+
+            weighted_gold_per_minute = sum(g * w for g, w in zip(gold_list, weights))
+            gold_per_hour = weighted_gold_per_minute * 60
+
             print(f"Estimated gold per hour: {gold_per_hour}")
 
-            # reset total gold and start time for the next interval
-            total_gold = 0
+            gold_list = []
+            weights = []
             start_time = time.time()
         else:
-            time.sleep(1)  # wait for 1 second
+            time.sleep(1)
 
 if __name__ == "__main__":
     main()
-
