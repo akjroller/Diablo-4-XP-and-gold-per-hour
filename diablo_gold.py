@@ -5,7 +5,7 @@ from mss import mss
 import time
 import re
 
-mon = {'top': 0, 'left': 0, 'width': 1920, 'height': 1080}  # Adjust this to your screen
+mon = {'top': 100, 'left': 400, 'width': 1020, 'height': 750}  # Adjust this to your screen
 sct = mss()
 
 def get_gold_from_screen():
