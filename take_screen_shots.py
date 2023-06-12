@@ -14,6 +14,7 @@ sct = mss()
 i = 0
 while True:
     screenshot = np.array(sct.grab(mon))
+    screenshot = cv2.cvtColor(screenshot, cv2.COLOR_BGR2GRAY)
     filename = os.path.join(directory, f"screenshot_{i}.png")
 
     cv2.imwrite(filename, cv2.cvtColor(screenshot, cv2.COLOR_RGB2BGR))
