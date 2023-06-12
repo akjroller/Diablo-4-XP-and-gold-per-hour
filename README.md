@@ -9,6 +9,8 @@ This script uses Python and OCR (Optical Character Recognition) to take screensh
 - Numpy
 - Pytesseract
 - mss
+- Pillow
+- Tkinter
 
 ## Installation
 
@@ -49,4 +51,4 @@ Note: The 'mon' variable in the script defines the area of the screen the script
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome and appreciated! Please check out our [contributing guidelines](./CONTRIBUTING.md) for detailed information on how you can lend a hand.
