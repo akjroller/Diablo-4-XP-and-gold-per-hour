@@ -32,6 +32,13 @@ cd diablo5-gold-tracker
 pip install -r requirements.txt
 ```
 
+## Windows Users
+
+An executable version of the script is available in the dist folder for ease of use.
+
+Navigate to the dist folder in the repository.
+Double click the diablo_gold.exe file to run the application.
+
 ## Usage
 
 To start tracking gold, simply run the script.

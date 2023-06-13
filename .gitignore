@@ -120,6 +120,7 @@ ENV/
 env.bak/
 venv.bak/
 diablo4/
+build/
 
 # Spyder project settings
 .spyderproject
