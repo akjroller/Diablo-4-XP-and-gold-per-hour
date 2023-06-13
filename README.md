@@ -1,4 +1,4 @@
-# - Warning 
+# Warning 
 - This is still a work in progress and is not fully fuctional yet. 
 - It fails to detect the gold amount in the game most of the time. 
 - I am still working on improving the accuracy of the OCR functionality.
