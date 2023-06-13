@@ -61,6 +61,16 @@ Note: The 'mon' variable in the script defines the area of the screen the script
 
 - Improve the script's accuracy in detecting gold from the game. The OCR functionality can sometimes misread the on-screen text or fail to find it. Future enhancements should focus on refining this aspect of the script.
 
+- Create .exe file for non-Windows users.
+
+- Create a tesseract model for the gold font in the game.
+
+- Make GUI more user friendly.
+
+- Create an easier way for non technical users to install the .exe and dependencies.
+
+- Make .exe and .py files more performant.
+
 
 ## Contributing
 
