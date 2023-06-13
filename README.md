@@ -16,8 +16,11 @@ This script uses Python and OCR (Optical Character Recognition) to take screensh
 - mss
 - Pillow
 - Tkinter
+- Tesseract OCR
 
 ## Installation
+
+0. Install Tesseract: https://github.com/tesseract-ocr/tesseract
 
 1. Clone this repository.
 
