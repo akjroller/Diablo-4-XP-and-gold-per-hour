@@ -10,13 +10,8 @@ This script uses Python and OCR (Optical Character Recognition) to take screensh
 ## Dependencies
 
 - Python 3.6 or higher
-- OpenCV (cv2)
-- Numpy
-- Pytesseract
-- mss
-- Pillow
-- Tkinter
 - Tesseract OCR
+- Some Python libraries, including OpenCV, Numpy, Pytesseract, mss, Pillow, and Tkinter
 
 ## Installation
 
