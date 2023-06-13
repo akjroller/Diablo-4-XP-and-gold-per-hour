@@ -34,9 +34,9 @@ pip install -r requirements.txt
 
 ## Windows Users
 
-An executable version of the script is available in the dist folder for ease of use.
+An executable version of the script is available in the main folder for ease of use.
 
-Navigate to the dist folder in the repository.
+Navigate to the main folder in the repository.
 Double click the diablo_gold.exe file to run the application.
 
 ## Usage
