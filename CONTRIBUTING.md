@@ -4,7 +4,7 @@ First off, thank you for considering contributing to this project! All types of 
 
 ## Getting Started
 
-This project aims to develop a system that automatically identifies the presence of gold and XP in Diablo 4, then estimates the gold and XP earning rate. The main tasks involved are gathering screenshots and their corresponding ground truths to train a Tesseract model.
+This project aims to develop a system that automatically identifies the presence of gold in Diablo 4, then estimates the gold and XP earning rate. The main tasks involved are gathering screenshots and their corresponding ground truths to train a Tesseract model.
 
 ### Step 1
 
